@@ -1,0 +1,78 @@
+.workers {
+  background: $third-color;
+}
+
+.workers-list {
+  display: flex;
+}
+
+.workers-list__item {
+  background: $main-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.workers-list__item + .workers-list__item {
+  margin-left: 30px;
+}
+
+.workers__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.workers-list__box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.workers-list__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  color: $title-color;
+  margin-bottom: 10px;
+}
+
+.workers-list__profession {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  color: $text-color;
+  margin-bottom: 16px;
+}
+
+.icons-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icons-list__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $icons-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-list__icons {
+  fill: currentColor;
+}
+
+.icons-list__link:hover,
+.icons-list__link:focus {
+  background-color: $accent-color;
+  color: $main-color;
+}

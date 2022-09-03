@@ -1,0 +1,61 @@
+.footer {
+  background: $background-color;
+  padding: 60px 0px;
+}
+
+.footer__web {
+  color: $accent-color;
+}
+
+.footer__studio {
+  color: $main-color;
+}
+
+.address-list__item {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(24 / 14);
+}
+
+.address-list__link {
+  line-height: calc(24 / 14);
+  color: $main-color;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-list__link:hover,
+.address-list__link:focus {
+  color: $accent-color;
+}
+
+.address-list__link {
+  color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-list__link:hover,
+.address-list__link:focus {
+  color: $accent-color;
+}
+
+.address {
+  margin-top: 20px;
+}
+
+.address-list__item {
+  display: block;
+}
+
+.address-list__item + .address-list__item {
+  margin-top: 9px;
+}
+
+.ft {
+  display: flex;
+  align-items: baseline;
+}

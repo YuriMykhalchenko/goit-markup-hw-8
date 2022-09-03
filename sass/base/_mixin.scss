@@ -1,0 +1,5 @@
+@mixin centeredFlex($df, $ai, $jc) {
+  display: $df;
+  align-items: $ai;
+  justify-content: $jc;
+}
