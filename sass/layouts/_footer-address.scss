@@ -1,61 +1,62 @@
 .footer {
-  background: $background-color;
-  padding: 60px 0px;
-}
-
-.footer__web {
-  color: $accent-color;
-}
-
-.footer__studio {
-  color: $main-color;
-}
-
-.address-list__item {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: calc(24 / 14);
-}
-
-.address-list__link {
-  line-height: calc(24 / 14);
-  color: $main-color;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address-list__link:hover,
-.address-list__link:focus {
-  color: $accent-color;
-}
-
-.address-list__link {
-  color: rgba(255, 255, 255, 0.6);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address-list__link:hover,
-.address-list__link:focus {
-  color: $accent-color;
-}
-
-.address {
-  margin-top: 20px;
-}
-
-.address-list__item {
-  display: block;
-}
-
-.address-list__item + .address-list__item {
-  margin-top: 9px;
-}
-
-.ft {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $background-color;
   display: flex;
-  align-items: baseline;
+  &__container {
+    @include desktop {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  @include desktop {
+    justify-content: start;
+  }
+}
+
+.footer__contacts-set {
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+.footer__thumb {
+  text-align: center;
+  @include desktop {
+    margin-right: 70px;
+    text-align: start;
+  }
+}
+.logo__second-word--footer {
+  color: $main-color;
+}
+.adress__list {
+  @extend %list;
+}
+
+.adress__link {
+  @extend %link;
+  line-height: 1.71;
+  color: $text-color;
+  @extend %transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &--change-color {
+    color: $main-color;
+  }
+}
+.adress__item:not(:last-child) {
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }

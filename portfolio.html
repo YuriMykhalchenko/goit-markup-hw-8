@@ -21,66 +21,128 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header class="top">
-      <div class="header container">
-        <a
-          href="./index.html"
-          class="header__link link"
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-          ><span class="header__web webstudio">Web</span
-          ><span class="header__studio webstudio">Studio</span></a
-        >
-        <nav class="header-nav">
-          <ul class="header-nav-list list">
-            <li class="header-nav-list__item">
-              <a href="./index.html" class="header-nav-list__link link"
+    <header class="header">
+      <div class="header__container container">
+        <nav class="header__nav">
+          <a href="./index.html" class="logo header__logo" lang="en">
+            <span class="logo__first-word">Web</span
+            ><span class="logo__second-word">Studio</span>
+          </a>
+          <ul class="site-nav list">
+            <li class="site-nav__item">
+              <a href="./index.html" class="site-nav__link site-nav__link link"
                 >Студия</a
               >
             </li>
-            <li class="header-nav-list__item">
+            <li class="site-nav__item">
               <a
                 href="./portfolio.html"
-                class="header-nav-list__link link current"
+                class="site-nav__link site-nav__link--current link"
                 >Портфолио</a
               >
             </li>
-            <li class="header-nav-list__item">
-              <a href="./index.html" class="header-nav-list__link link"
+            <li class="site-nav__item">
+              <a href="#" class="site-nav__link site-nav__link link"
                 >Контакты</a
               >
             </li>
           </ul>
+
+          <ul class="contacts header-contacts list">
+            <li class="contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="contacts__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                ><svg class="contacts__icon" width="16" height="12">
+                  <use href="./img/icon.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contacts__item">
+              <a
+                href="tel:+380961111111"
+                class="contacts__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./img/icon.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
         </nav>
-        <ul class="header-list">
-          <li class="header-list__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="header-list__link link"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              ><svg class="header-list__icons" width="16" height="12">
-                <use href="./img/icon.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-list__item">
-            <a
-              href="tel:+380961111111"
-              class="header-list__link link"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              <svg class="header-list__icons" width="10" height="16">
-                <use href="./img/icon.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        <button type="button" class="menu-open-button" data-menu-open>
+          <svg class="menu-open-button__icon" width="40" height="40">
+            <use href="./img/icon.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container is-hidden" data-menu>
+          <button class="menu-toggle" data-menu-close>
+            <svg class="menu-toggle__cross-icon" width="40" height="40">
+              <use
+                class="icon-cross"
+                href="./img/icon.svg#icon-close_menu"
+              ></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__list list">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu__link link">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href="./portfolio.html"
+                class="mobile-menu__link mobile-menu__link--current link"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#" class="mobile-menu__link link">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-contacts list">
+            <li class="mobile-contacts__item">
+              <a
+                href="tel:+380961111111"
+                class="mobile-contacts__link-tel link"
+              >
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                href="mainto:info@devstudio.com"
+                class="mobile-contacts__link link"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-soc-links list">
+            <li class="mobile-soc-links_item">
+              <a href="" class="mobile-soc-links_link link"></a> Instagram
+            </li>
+            <li class="mobile-soc-links_item">
+              <a href="" class="mobile-soc-links_link link"></a> Twitter
+            </li>
+            <li class="mobile-soc-links_item">
+              <a href="" class="mobile-soc-links_link link"></a> Facebook
+            </li>
+            <li class="mobile-soc-links_item">
+              <a href="" class="mobile-soc-links_link link"></a> LinkedIn
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
+
     <main>
       <section class="nav section">
         <div class="container">
@@ -106,11 +168,32 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link">
                 <div class="overlay">
-                  <img
-                    src="./img/ourproduct1.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct1.jpg    1x,
+                        ./img/ourproduct1-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct1-tab.jpg    1x,
+                        ./img/ourproduct1-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct1-mob.jpg    1x,
+                        ./img/ourproduct1-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct1.jpg" alt="Проєкти" />
+                  </picture>
+
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -126,11 +209,31 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link"
                 ><div class="overlay">
-                  <img
-                    src="./img/ourproduct2.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct2.jpg    1x,
+                        ./img/ourproduct2-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct2-tab.jpg    1x,
+                        ./img/ourproduct2-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct2-mob.jpg    1x,
+                        ./img/ourproduct2-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct2.jpg" alt="Проєкти" />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -148,11 +251,31 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link"
                 ><div class="overlay">
-                  <img
-                    src="./img/ourproduct3.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct3.jpg    1x,
+                        ./img/ourproduct3-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct3-tab.jpg    1x,
+                        ./img/ourproduct3-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct3-mob.jpg    1x,
+                        ./img/ourproduct3-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct3.jpg" alt="Проєкти" />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -168,11 +291,31 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link"
                 ><div class="overlay">
-                  <img
-                    src="./img/ourproduct4.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct4.jpg    1x,
+                        ./img/ourproduct4-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct4-tab.jpg    1x,
+                        ./img/ourproduct4-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct4-mob.jpg    1x,
+                        ./img/ourproduct4-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct4.jpg" alt="Проєкти" />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -188,11 +331,31 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link"
                 ><div class="overlay">
-                  <img
-                    src="./img/ourproduct5.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct5.jpg    1x,
+                        ./img/ourproduct5-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct5-tab.jpg    1x,
+                        ./img/ourproduct5-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct5-mob.jpg    1x,
+                        ./img/ourproduct5-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct5.jpg" alt="Проєкти" />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -208,11 +371,31 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link"
                 ><div class="overlay">
-                  <img
-                    src="./img/ourproduct6.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct6.jpg    1x,
+                        ./img/ourproduct6-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct6-tab.jpg    1x,
+                        ./img/ourproduct6-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct6-mob.jpg    1x,
+                        ./img/ourproduct6-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct6.jpg" alt="Проєкти" />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -228,11 +411,31 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link"
                 ><div class="overlay">
-                  <img
-                    src="./img/ourproduct7.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct7.jpg    1x,
+                        ./img/ourproduct7-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct7-tab.jpg    1x,
+                        ./img/ourproduct7-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct7-mob.jpg    1x,
+                        ./img/ourproduct7-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct7.jpg" alt="Проєкти" />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -248,11 +451,31 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link"
                 ><div class="overlay">
-                  <img
-                    src="./img/ourproduct8.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct8.jpg    1x,
+                        ./img/ourproduct8-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct8-tab.jpg    1x,
+                        ./img/ourproduct8-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct8-mob.jpg    1x,
+                        ./img/ourproduct8-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct8.jpg" alt="Проєкти" />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -268,11 +491,31 @@
             <li class="choice-list__item img">
               <a href="" class="choice-list__link link"
                 ><div class="overlay">
-                  <img
-                    src="./img/ourproduct9.jpg"
-                    width="370"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/ourproduct9.jpg    1x,
+                        ./img/ourproduct9-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/ourproduct9-tab.jpg    1x,
+                        ./img/ourproduct9-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/ourproduct9-mob.jpg    1x,
+                        ./img/ourproduct9-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./img/ourproduct9.jpg" alt="Проєкти" />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -290,116 +533,106 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container ft">
-        <div>
-          <a
-            class="footer__link link"
-            href="./index.html"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
-            <span class="footer__web webstudio">Web</span
-            ><span class="footer__studio webstudio">Studio</span>
-          </a>
-          <address class="address">
-            <ul class="address-list list">
-              <li class="address-list__item">
+      <div class="footer__container container">
+        <div class="footer__contacts-set">
+          <div class="footer__thumb">
+            <a href="./index.html" class="logo footer-logo link">
+              <span class="logo__first-word">Web</span
+              ><span class="logo__second-word--footer">Studio</span>
+            </a>
+            <address class="adress">
+              <ul class="adress__list">
+                <li class="adress__item">
+                  <a
+                    href="https://goo.gl/maps/MaqQEwh975hQiFbC6"
+                    target="_blank"
+                    rel="noopener nooreffer noofollow"
+                    class="adress__link adress__link--change-color link"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="adress__item">
+                  <a href="mailto:info@example.com" class="adress__link link"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="adress__item">
+                  <a href="tel:+380991111111" class="adress__link link"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="socials">
+            <h2 class="socials__title">Присоединяйтесь</h2>
+            <ul class="socials__list list">
+              <li class="socials__item">
                 <a
-                  class="address-list__link link"
-                  href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4265841,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
+                  href="#"
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  rel="noopener nofollow noreferrer"
+                  class="socials__link link"
                 >
-                  г. Киев, пр-т Леси Украинки, 26
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/icon.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address-list__item link">
+              <li class="socials__item">
                 <a
-                  href="mailto:info@devstudio.com"
-                  class="address-list__link link"
+                  href="#"
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >info@example.com</a
+                  rel="noopener nofollow noreferrer"
+                  class="socials__link link"
                 >
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/icon.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-list__item link">
+              <li class="socials__item">
                 <a
-                  href="tel:+380961111111"
-                  class="address-list__link link"
+                  href="#"
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >+38 096 111 11 11</a
+                  rel="noopener nofollow noreferrer"
+                  class="socials__link link"
                 >
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/icon.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  class="socials__link link"
+                >
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/icon.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="social">
-          <p class="social__text">Присоединяйтесь</p>
-          <ul class="social-list list">
-            <li class="social-list__item">
-              <a
-                href=""
-                class="social-list__link link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-list__icons" width="20" height="20">
-                  <use href="./img/icon.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a
-                href=""
-                class="social-list__link link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-list__icons" width="20" height="20">
-                  <use href="./img/icon.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a
-                href=""
-                class="social-list__link link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-list__icons" width="20" height="20">
-                  <use href="./img/icon.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a
-                href=""
-                class="social-list__link link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-list__icons" width="20" height="20">
-                  <use href="./img/icon.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+
         <div class="sign-up">
           <p class="sign-up__title">Подпишитесь на рассылку</p>
-          <form class="sign-up__form">
+          <form class="form">
             <input
               type="email"
-              class="sign-up__email"
+              class="form__input"
               name="email"
               placeholder="E-mail"
               required
             />
             <button type="submit" class="submit-button">
               Подписаться
-              <svg class="send-icon icon" width="24" height="24">
+              <svg class="submit-button__icon" width="24" height="24">
                 <use href="./img/icon.svg#icon-icon-send"></use>
               </svg>
             </button>
@@ -408,5 +641,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

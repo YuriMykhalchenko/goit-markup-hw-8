@@ -14,12 +14,25 @@
 }
 
 .modal {
+  @media screen and (max-width: 479px) {
+    max-width: 450px;
+  }
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+    width: 450px;
+    height: 609px;
+  }
+
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
@@ -53,8 +66,8 @@
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  color: $title-color;
   margin-bottom: 12px;
+  margin-bottom: 31px;
 }
 
 .form-field {
@@ -136,30 +149,50 @@
   }
 }
 
-.form-check {
-  position: relative;
+.custom-check-box {
   @include centeredFlex(flex, center, center);
-  font-size: 14px;
-  line-height: 1.71;
-  color: $text-color;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
+.form-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include centeredFlex(flex, center, center);
 
-.form-check__mailimg-features {
+  font-size: 12px;
+  line-height: 1.17;
+  cursor: pointer;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.form-check__input {
+  display: flex;
+  align-items: center;
+}
+.form-check__mailing-features {
   color: $accent-color;
   outline-color: $accent-color;
 }
 
 .form-check__square-icon {
   position: absolute;
-  display: flex;
-  top: 0;
-  left: 32px;
+  left: 0;
+  top: -5px;
+  @include desktop {
+    top: 0;
+  }
+  @include centeredFlex(flex, center, center);
+  margin-right: 8px;
   transform: translate(-25px, 4px);
   width: 16px;
   height: 15px;
-  border: 2px solid $text-color;
+  fill: $main-color;
   border-radius: 2px;
+  border: 2px solid $title-color;
   cursor: pointer;
   .form-check__input:checked ~ & {
     background-size: cover;
@@ -170,9 +203,6 @@
   }
 }
 
-.form-check__icon {
-  fill: $main-color;
-}
 .form-check:focus-within .form-square-icon {
   border: 2px solid $accent-color;
 }
@@ -185,6 +215,7 @@
   letter-spacing: 0.06em;
   color: $main-color;
   background-color: $accent-color;
+  border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 52px;
   transition-property: background-color, box-shadow;
@@ -195,5 +226,4 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: #188ce8;
   }
-  border-radius: 4px;
 }

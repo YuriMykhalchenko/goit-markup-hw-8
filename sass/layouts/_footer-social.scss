@@ -1,115 +1,134 @@
-.social {
-  margin-left: 70px;
+.socials {
+  text-align: center;
+  @include desktop {
+    text-align: start;
+  }
 }
 
-.social__text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  color: #ffffff;
+.socials__title {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
   margin-bottom: 20px;
+  font-weight: 700;
+  font-size: $main-font-size;
+  line-height: 1.14;
   text-transform: uppercase;
+  color: $main-color;
 }
 
-.social-list {
-  display: flex;
+.socials__list {
+  @include centeredFlex(flex, center, center);
   gap: 10px;
+  margin-bottom: 60px;
+  @extend %list;
 }
 
-.social-list__link {
+.socials__link {
+  @include centeredFlex(flex, center, center);
+  @extend %link;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
   color: $main-color;
-  transition-property: $background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: $icons-color;
+  @extend %transition;
+  &:hover,
+  &:focus {
+    color: $main-color;
+    background-color: $accent-color;
+  }
 }
-
-.social-list__link:hover,
-.social-list__link:focus {
-  background: $accent-color;
-}
-
-.social-list__icons {
-  fill: currentColor;
+.socials__icon {
+  fill: $main-color;
 }
 
 .sign-up {
-  margin-left: auto;
+  text-align: center;
+  @include desktop {
+    margin-left: auto;
+    text-align: start;
+  }
+
+  .sign-up__title {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 20px;
+    @include tablet {
+      margin-top: 60px;
+    }
+  }
 }
 
-.sign-up__title {
-  font-weight: 700;
-  line-height: calc(16 / 14);
-  text-transform: uppercase;
-  color: $main-color;
+.form {
+  @include desktop {
+    display: flex;
+  }
+}
+.form__input {
+  padding: 15px;
+  width: 100%;
+  height: 50px;
+  @include tablet {
+    width: 450px;
+  }
+  @include desktop {
+    width: 358px;
+  }
   margin-bottom: 20px;
-}
-
-.sign-up__form {
-  display: flex;
-}
-
-.sign-up__email {
-  padding: 11px;
-  width: 358px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   color: rgba(255, 255, 255, 0.6);
   border-radius: 4px;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
   cursor: pointer;
-}
-
-.sign-up__email:hover,
-.sign-up__email:focus {
-  border-color: $accent-color;
-}
-
-.sign-up__email::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+  &::placeholder {
+    font-size: 14px;
+    @include desktop {
+      font-size: 16px;
+    }
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .submit-button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  border-radius: 4px;
   width: 200px;
   height: 50px;
   padding: 10px 10px 10px 28px;
-  margin-left: 12px;
+  @include desktop {
+    margin-left: 12px;
+  }
+
   font-family: inherit;
   color: $main-color;
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(30 / 16);
+  line-height: 1.88;
   letter-spacing: 0.06em;
   background-color: $accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
+  box-shadow: $box-button-shadow;
   transform: scale(1);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %button;
+  @extend %transition;
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
 }
 
-.submit-button:hover,
-.submit-button:hover {
-  transform: scale(1.02);
-}
-
-.send-icon {
-  fill: $main-color;
+.submit-button__icon {
+  @extend %icon;
   margin-left: 10px;
 }
