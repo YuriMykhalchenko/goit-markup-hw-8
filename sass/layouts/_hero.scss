@@ -7,9 +7,9 @@
   margin-left: auto;
   margin-right: auto;
   padding: 118px 0;
-  background-image: $hero-background-gradient, url(../img/img-hero-mob.jpg);
+  background-image: $hero-background-gradient, url(../img/Img-hero-mob.jpg);
   @include retina {
-    background-image: $hero-background-gradient, url(../img/img-hero-mob-2x.jpg);
+    background-image: $hero-background-gradient, url(../img/Img-hero-mob-2x.jpg);
   }
   background-color: $bg-hero;
   background-size: cover;
@@ -18,10 +18,10 @@
 
   @include tablet {
     min-width: 768px;
-    background-image: $hero-background-gradient, url(../img/img-hero-tab.jpg);
+    background-image: $hero-background-gradient, url(../img/Img-hero-tab.jpg);
   }
   @include retina {
-    background-image: $hero-background-gradient, url(../img/img-hero-tab-2x.jpg);
+    background-image: $hero-background-gradient, url(../img/Img-hero-tab-2x.jpg);
     background-color: $bg-hero;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,10 +31,10 @@
   @include desktop {
     max-width: 1600px;
     height: 600px;
-    background-image: $hero-background-gradient, url(../img/img-hero.jpg);
+    background-image: $hero-background-gradient, url(../img/Img-hero.jpg);
   }
   @include retina {
-    background-image: $hero-background-gradient, url(../img/img-hero-2x.jpg);
+    background-image: $hero-background-gradient, url(../img/Img-hero-2x.jpg);
     background-color: $bg-hero;
     background-size: cover;
     background-repeat: no-repeat;
