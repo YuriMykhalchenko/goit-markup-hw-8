@@ -34,7 +34,7 @@
     background-image: $hero-background-gradient, url(../img/img-hero.jpg);
   }
   @include retina {
-    background-image: $hero-background-gradient, url(../img/img-hero-2x.jpg);
+    background-image: $hero-background-gradient, url(../img/Img-hero-2x.jpg);
     background-color: $bg-hero;
     background-size: cover;
     background-repeat: no-repeat;
