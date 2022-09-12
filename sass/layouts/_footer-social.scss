@@ -31,7 +31,7 @@
   height: 44px;
   border-radius: 50%;
   color: $main-color;
-  background-color: $icons-color;
+  background-color: $icon-footer-background;
   @extend %transition;
   &:hover,
   &:focus {

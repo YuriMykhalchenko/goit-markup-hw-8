@@ -39,6 +39,7 @@
 }
 .adress__list {
   @extend %list;
+  font-style: normal;
 }
 
 .adress__link {
